@@ -1,0 +1,19 @@
+body
+{
+    background: #E7FEE6;
+}
+footer
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.bouton
+{
+    border: black 2px solid;
+    border-radius: 3px;
+    background: #34C924;
+    color: lavender;
+}

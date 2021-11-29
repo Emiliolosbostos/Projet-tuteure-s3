@@ -3,7 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
+<<<<<<< HEAD
 -- Généré le : lun. 29 nov. 2021 à 10:36
+=======>>>>>>> c82c64b22acf8d3fe5c19da55ceeeb2970da2a5d
 -- Version du serveur : 8.0.27-0ubuntu0.20.04.1
 -- Version de PHP : 7.4.3
 
@@ -44,7 +46,12 @@ CREATE TABLE `jeux` (
   `id` int NOT NULL,
   `temps` int NOT NULL,
   `taux_err` int NOT NULL,
+<<<<<<< HEAD
   `question` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+=======
+  `questions` text NOT NULL,
+  `propositions` text NOT NULL,
+>>>>>>> c82c64b22acf8d3fe5c19da55ceeeb2970da2a5d
   `type` varchar(100) NOT NULL,
   `jeux_id` int NOT NULL,
   `categorie_id` int NOT NULL
@@ -102,7 +109,11 @@ CREATE TABLE `users` (
   `username` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(50) NOT NULL,
+<<<<<<< HEAD
   `dateInscription` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+=======
+  `dateIncription` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+>>>>>>> c82c64b22acf8d3fe5c19da55ceeeb2970da2a5d
   `ip` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
