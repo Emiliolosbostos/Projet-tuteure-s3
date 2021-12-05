@@ -93,24 +93,3 @@ body .navbar button {
   font-weight: bolder;
   color: #17ff02;
 }
-body .navbar input:hover {
-  background: #17ff02;
-  transition: 0.5s;
-  color: #2f3542;
-}
-body .navbar input:active {
-  transform: scale(0.9);
-  transition: transform 0.1s;
-}
-body .navbar input {
-  margin-left: 5%;
-  margin-top: 1%;
-  width: 100px;
-  height: 50%;
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
-  background: #2f3542;
-  font-weight: bolder;
-  color: #17ff02;
-}
