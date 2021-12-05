@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="perso.css">
+    <link rel="stylesheet" href="public/stylesheet/perso.css">
     <style>
         .gris {
             background: #656262;
