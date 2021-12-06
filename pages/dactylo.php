@@ -15,4 +15,6 @@
   <?php include('../includes/navbar.php'); ?>
 
   <script src="../public/javascripts/dactylo.js" type="text/javascript" ></script>
+
+  <?php include('../includes/footer.php'); ?>
 </body>

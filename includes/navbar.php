@@ -10,7 +10,7 @@
           position: fixed;
           border: 2px #17ff02 solid;
           background-color: #dfe4ea;
-         /* vertical-align: center;*/
+          /* vertical-align: center;*/
           display: flex;
         }
         body .navbar button:hover {

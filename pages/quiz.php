@@ -46,6 +46,7 @@
   </div>
    
   <script src="../public/javascripts/quiz.js" type="text/javascript" ></script>
+
 </body>
 
 

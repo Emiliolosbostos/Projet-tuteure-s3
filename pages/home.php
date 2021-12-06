@@ -30,5 +30,6 @@
         Code à trou
     </button>
 </div>
+<?php include('../includes/footer.php'); ?>
 </body>
 </html>
