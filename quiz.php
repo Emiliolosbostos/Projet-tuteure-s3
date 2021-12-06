@@ -12,14 +12,7 @@
 </head>
 
 <body>
-  <div class="navbar">
-    <button id="accueil" class="btn" onclick="window.location.href='accueil.html';">
-      <strong>Accueil</strong>
-    </button>
-    <button id="profil" class="btn">
-      <strong>Profil</strong>
-    </button>
-  </div>
+  <?php include('includes/navbar.php'); ?>
 
   <div class="container">
     <div id="quiz">
@@ -58,3 +51,4 @@
 
 
 </html>
+
