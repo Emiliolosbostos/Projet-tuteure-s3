@@ -8,11 +8,11 @@
   <title>Quiz - modèle</title>
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <link href="public/stylesheet/quiz.css" rel="stylesheet">
+  <link href="../public/stylesheet/quiz.css" rel="stylesheet">
 </head>
 
 <body>
-  <?php include('includes/navbar.php'); ?>
+  <?php include('../includes/navbar.php'); ?>
 
   <div class="container">
     <div id="quiz">
@@ -45,7 +45,7 @@
     </div>
   </div>
    
-  <script src="./quiz.js" type="text/javascript" ></script>
+  <script src="../public/javascript/quiz.js" type="text/javascript" ></script>
 </body>
 
 
