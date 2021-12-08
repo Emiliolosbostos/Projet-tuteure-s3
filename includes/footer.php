@@ -21,7 +21,6 @@
             height: auto;
             width: 100vw;
             font-family: "Open Sans";
-            padding-top: 40px;
             color: #fff;
             border-top : solid #17ff02;
         }
@@ -32,17 +31,8 @@
             flex-direction: column;
             text-align: center;
         }
-        .footer1 h3{
-            font-size: 1.8rem;
-            font-weight: 400;
-            text-transform: capitalize;
-            line-height: 3rem;
-            color : #17ff02;
-        }
         .footer1 p{
-            max-width: 500px;
             margin: 10px auto;
-            line-height: 28px;
             font-size: 14px;
             color : #17ff02;
         }
@@ -68,39 +58,14 @@
         .reseaux a:hover i{
             color: #17ff02;
         }
-
-        .footer2{
-            background: #000;
-            width: 100vw;
-            padding: 20px 0;
-            text-align: center;
-            border : solid #17ff02;
-        }
-        .footer2 p{
-            font-size: 14px;
-            word-spacing: 2px;
-            color : #17ff02;
-        }
-        .footer2 span{
-            text-transform: uppercase;
-            opacity: .4;
-            font-weight: 200;
-            color : #17ff02;
-        }
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <footer>
         <div class="footer1">
-            <h3>ProjetTuTS3</h3>
-            <p>Ce site propose une multitudes de jeux vous permettant de devenir de meilleurs codeurs. Rejoignez notre discord pour rejoindre la communauté !</p>
-            <ul class="reseaux">
-                <li><a href="https://discord.gg/6P7NYZGK"><i class="fab fa-discord"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer2">
-            <p>copyright Emile Mathias Sami Vassilly William</p>
+            <p>Ce site propose une multitudes de jeux vous permettant de devenir de meilleurs codeurs. Rejoignez notre &ensp;<a href="https://discord.gg/6P7NYZGK"><i class="fab fa-discord"></i></a>&ensp; pour intégrer la communauté !</p>
+            <p>&copy; Emile - Mathias - Sami - Vassilly - William</p>
         </div>
     </footer>
 </body>
