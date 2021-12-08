@@ -21,7 +21,7 @@ $reponses = array(
 </canvas>
 <head>
     <title>tkt</title>
-    <link href="public/stylesheet/style.css" rel="stylesheet" type="text/css">
+    <link href="../public/stylesheet/style.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
