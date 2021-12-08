@@ -8,7 +8,7 @@
   <title>Quiz - modèle</title>
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <link href="../public/stylesheet/quiz.css" rel="stylesheet">
+  <link href="../assets/css/quiz.css" rel="stylesheet">
 </head>
 
 <body>
@@ -45,7 +45,7 @@
     </div>
   </div>
    
-  <script src="../public/javascripts/quiz.js" type="text/javascript" ></script>
+  <script src="../assets/js/quiz.js" type="text/javascript" ></script>
 
 </body>
 

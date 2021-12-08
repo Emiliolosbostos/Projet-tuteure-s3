@@ -21,7 +21,7 @@ $reponses = array(
 </canvas>
 <head>
     <title>tkt</title>
-    <link href="../public/stylesheet/style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -34,7 +34,7 @@ $reponses = array(
       if($pswd == $reponses[$_SESSION['rand_keys']]){
         $_SESSION['valid'] = 'test';
         //echo($_SESSION['rand_keys']);
-        header('Location: home.php');
+        header('Location: client/home.php');
       }else{
         if(isset($_SESSION['valid'])){
           unset($_SESSION['valid']);
