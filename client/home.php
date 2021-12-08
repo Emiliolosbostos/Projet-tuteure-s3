@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(isset($_SESSION['valid'])){
+  echo 'Bienvenue mon reuf';
+}else{
+  session_destroy();
+  header('Location: ../');
+}
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -9,16 +18,6 @@
 </head>
 <body>
   <?php include('../includes/navbar.php'); ?>
-  <?php
-  session_start();
-  if(isset($_SESSION['valid'])){
-      echo 'Bienvenue mon reuf';
-  }else{
-      session_destroy();
-      echo 'Bien essayé petit malin';
-  }
-
-  ?>
 <div class="content">
     <button id="Quiz" class="btn" onclick="window.location.href='quiz.php';">
         Quiz
