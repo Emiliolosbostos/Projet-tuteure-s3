@@ -10,7 +10,7 @@ $questions = array(
 $reponses = array(
   1 => "CSS",
   2 => "C",
-  3 => "Python"
+  3 => "PYTHON"
 );
 
 ?>
@@ -31,6 +31,7 @@ $reponses = array(
     <?php
     if(isset($_POST['pswd'])){
       $pswd = $_POST['pswd'];
+      $pswd = strtoupper($pswd);
       if($pswd == $reponses[$_SESSION['rand_keys']]){
         $_SESSION['valid'] = 'test';
         //echo($_SESSION['rand_keys']);
