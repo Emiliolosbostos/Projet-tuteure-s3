@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+canvas {
+	display: block;
+}
+body {
+  background-color: #ffffff;
+  display: table;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+.div1 {
+  height: 100%;
+  width: 100%;
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.div2 {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: VT323;
+  font-size: 25px;
+  color: #656262;
+}
+
+.box {
+  text-align: center;
+  font-size: 20px;
+  font-family: VT323;
+  outline: none;
+  width: 250px;
+  height: 35px;
+  border: none;
+  border-bottom: 2px solid #656262;
+	background: transparent;
+}
+
+.confirm {
+  border: none;
+  font-size: 20px;
+  font-family: VT323;
+  margin-top: 10px;
+  color: #656262;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+
+.frame {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 400px;
+	 height: 400px;
+	 margin-top: -200px;
+	 margin-left: -200px;
+	 border-radius: 2px;
+	 overflow: hidden;
+	 color: #415868;
+   font-family: VT323;
+	 -webkit-font-smoothing: antialiased;
+	 -moz-osx-font-smoothing: grayscale;
+}
+ .modal {
+	 position: absolute;
+	 width: 280px;
+	 height: 210px;
+	 top: 95px;
+	 left: 60px;
+	 background: #fff;
+	 border-radius: 3px;
+	 box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.4);
+	 text-align: center;
+	 overflow: hidden;
+	 animation: show-modal 0.7s ease-in-out;
+}
+ .modal.hide {
+	 animation: hide-modal 0.6s ease-in-out both;
+}
+ .modal img {
+	 margin-top: 24px;
+}
+ .modal .title {
+	 display: block;
+	 font-size: 18px;
+	 line-height: 24px;
+	 font-weight: 400;
+	 margin: 14px 0 5px 0;
+}
+ .modal p {
+	 font-size: 14px;
+	 font-weight: 300;
+	 line-height: 19px;
+	 margin: 0;
+	 padding: 0 30px;
+}
+ .modal .button {
+	 position: absolute;
+	 height: 40px;
+	 bottom: 0;
+	 left: 0;
+	 right: 0;
+	 background: #f65656;
+	 color: #fff;
+	 line-height: 40px;
+	 font-size: 14px;
+	 font-weight: 400;
+	 cursor: pointer;
+	 transition: background 0.3s ease-in-out;
+}
+ .modal .button:hover {
+	 background: #ec3434;
+}
+ @keyframes show-modal {
+	 0% {
+		 transform: scale(0);
+	}
+	 60% {
+		 transform: scale(1.1);
+	}
+	 80% {
+		 transform: scale(0.95);
+	}
+	 100% {
+		 transform: scale(1);
+	}
+}
+ @keyframes hide-modal {
+	 0% {
+		 transform: scale(1);
+	}
+	 20% {
+		 transform: scale(1.1);
+	}
+	 100% {
+		 transform: scale(0);
+	}
+}
+ 
