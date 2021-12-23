@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <link rel="shortcut icon" href="#">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,36 +16,37 @@
   <?php include('../includes/navbar.php'); ?>
 
   <div class="container">
-    <div id="quiz">
-      <h1><span>Q</span>uiz <i class="far fa-question-circle"></i></h1>
+    <div class="btnChoices">
+      <div id="quiz">
+        <h1><span>Q</span>uiz <i class="far fa-question-circle"></i></h1>
 
-      <h2 id="question"></h2>
-        
-      <h3 id="score"></h3>
+        <h2 id="question"></h2>
 
-      <div class="choices">
-        <button id="guess0" class="btn">        
-          <p id="choice0"></p>
-        </button>
+        <h3 id="score"></h3>
 
-        <button id="guess1" class="btn">
-          <p id="choice1"></p>
-        </button>
-          
-        <button id="guess2" class="btn">
-          <p id="choice2"></p>
-        </button>
-          
-        <button id="guess3" class="btn">
-          <p id="choice3"></p>
-        </button>
+        <div class="choices">
+          <button id="guess0" class="btn">
+            <p id="choice0"></p>
+          </button>
+
+          <button id="guess1" class="btn">
+            <p id="choice1"></p>
+          </button>
+
+          <button id="guess2" class="btn">
+            <p id="choice2"></p>
+          </button>
+
+          <button id="guess3" class="btn">
+            <p id="choice3"></p>
+          </button>
+        </div>
+        <p id="progress"></p>
       </div>
-
-      <p id="progress"></p>
-
+    </div>
+    <div id="answers">
     </div>
   </div>
-   
   <script src="../assets/js/quiz.js" type="text/javascript" ></script>
 
 </body>

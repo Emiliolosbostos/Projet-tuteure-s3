@@ -22,6 +22,10 @@ body h1 {
 body h1 span, body h1 i {
   color: #17ff02;
 }
+body h2 {
+  color: #dfe4ea;
+  font-size: large;
+}
 body h3 {
   color: #17ff02;
   font-size: 1.5rem;
@@ -32,7 +36,7 @@ body .container .choices {
   margin: 3rem auto 3rem;
   width: 500px;
 }
-body .container .choices button {
+body .container .btn {
   flex: 1 0 45%;
   width: 200px;
   height: 80px;
@@ -59,4 +63,29 @@ body .container .choices button p {
 body #progress {
   font-size: 1.3rem;
   color: #17ff02;
+}
+
+/*Les boutons dans answers:*/
+/*Les boutons pour indéxer*/
+body .container .increment {
+  width: 100px;
+  height: 20px;
+  cursor: pointer;
+  align-items: center;
+  vertical-align: center;
+}
+.increment{
+  display: flex;
+  align-items: center;
+}
+
+body .container .answers {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3rem auto 3rem;
+  width: 500px;
+}
+
+#realAnswer {
+  background: #17ff02;
 }

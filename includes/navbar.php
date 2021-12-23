@@ -32,7 +32,7 @@
           border: none;
           background: #202020;
           font-weight: bolder;
-          color: #17ff02;
+          color: #dfe4ea;
         }
     </style>
 </head>
