@@ -24,7 +24,7 @@ body h1 span, body h1 i {
 }
 body h2 {
   color: #dfe4ea;
-  font-size: large;
+  font-size: 1.7rem;
 }
 body h3 {
   color: #17ff02;
@@ -48,6 +48,7 @@ body .container .btn {
   background: #dfe4ea;
   user-select: none;
   font-weight: 600;
+  font-size: 1.3rem;
 }
 body .container .choices button:hover {
   background: #17ff02;
@@ -57,35 +58,38 @@ body .container .choices button:active {
   transform: scale(0.9);
   transition: transform 0.1s;
 }
-body .container .choices button p {
-  font-size: 1.3rem;
-}
 body #progress {
   font-size: 1.3rem;
   color: #17ff02;
 }
 
 /*Les boutons dans answers:*/
-/*Les boutons pour indéxer*/
-body .container .increment {
-  width: 100px;
-  height: 20px;
-  cursor: pointer;
-  align-items: center;
-  vertical-align: center;
-}
-.increment{
-  display: flex;
-  align-items: center;
-}
 
 body .container .answers {
   display: flex;
   flex-wrap: wrap;
   margin: 3rem auto 3rem;
   width: 500px;
+  font-size: 1.3rem;
 }
 
 #realAnswer {
   background: #17ff02;
+}
+/*Les boutons pour indéxer*/
+
+.increment {
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  align-items: center;
+  vertical-align: center;
+}
+.index{
+  margin-top: 50px;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  vertical-align: center;
+
 }
