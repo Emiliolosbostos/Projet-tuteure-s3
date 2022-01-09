@@ -15,6 +15,8 @@ if(isset($_SESSION['valid'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <title>Home</title>
 </head>
 <body>
   <?php include('../includes/navbar.php'); ?>
@@ -25,7 +27,7 @@ if(isset($_SESSION['valid'])){
     <button id="Dactylographie" class="btn" onclick="window.location.href='dactylo.php';">
         Dactylographie
     </button>
-    <button id="CodeATrou" class="btn" onclick="window.location.href='codeATrou.php';">
+    <button id="CodeATrou" class="btn" onclick="window.location.href='codeAtrous.php';">
         Code à trou
     </button>
 </div>

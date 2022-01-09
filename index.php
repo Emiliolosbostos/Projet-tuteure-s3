@@ -35,7 +35,7 @@ $reponses = array(
       if($pswd == $reponses[$_SESSION['rand_keys']]){
         $_SESSION['valid'] = 'test';
         //echo($_SESSION['rand_keys']);
-        header('Location: home.php');
+        header('Location: client/home.php');
       }else{
         if(isset($_SESSION['valid'])){
           unset($_SESSION['valid']);
