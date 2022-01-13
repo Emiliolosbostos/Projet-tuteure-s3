@@ -44,8 +44,8 @@ answer.onclick = function () {
 }
 reset.onclick = function() {
     h1.textContent = "00:00:00";
-    answer.textContent = "";
-    seconds = 0; minutes = 0; hours = 0;
+    answer.value = "";
+    sec = 0; min = 0; hrs = 0;
 }
 
 function score(){
