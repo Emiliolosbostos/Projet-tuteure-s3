@@ -76,7 +76,7 @@ body .container .answers {
 #realAnswer {
   background: #17ff02;
 }
-/*Les boutons pour indéxer*/
+/*Les boutons pour indexer*/
 
 .increment {
   width: 100%;
@@ -86,10 +86,12 @@ body .container .answers {
   vertical-align: center;
 }
 .index{
-  margin-top: 50px;
-  width: 20px;
-  height: 20px;
+  margin-top: 40px;
+  width: 30px;
+  height: 30px;
   align-items: center;
   vertical-align: center;
+  cursor: pointer;
+  font-size: 1.5rem;
 
 }
