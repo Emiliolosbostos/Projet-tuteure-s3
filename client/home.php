@@ -19,7 +19,7 @@ if(isset($_SESSION['valid'])){
     <title>Home</title>
 </head>
 <body>
-  <?php include('../includes/navbar.php'); ?>
+<?php include('../includes/navbar.php'); ?>
 <div class="content">
     <button id="Quiz" class="btn" onclick="window.location.href='quiz.php';">
         Quiz
@@ -30,7 +30,17 @@ if(isset($_SESSION['valid'])){
     <button id="CodeATrou" class="btn" onclick="window.location.href='codeAtrous.php';">
         Code à trou
     </button>
+    <table>
+        <thead>
+            <tr>
+                <th>Pseudo</th>
+                <th onclick="sortColumn('age')" class="wh">Score</th>
+            </tr>
+        </thead>
+        <tbody id="tableData"></tbody>
+        </table>
 </div>
+ <script src="../assets/js/accueil.js" type="text/javascript" ></script>
 <?php include('../includes/footer.php'); ?>
 </body>
 </html>
