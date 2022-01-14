@@ -36,6 +36,7 @@
 
             </form>
 
+            <button id="rejouer" class="btn" onclick="window.location.href='dactylo.php';">REJOUER</button>
             <p id="progress"></p>
         </div>
     </div>

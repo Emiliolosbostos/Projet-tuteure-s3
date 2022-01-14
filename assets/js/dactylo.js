@@ -1,5 +1,6 @@
 var h1 = document.getElementsByTagName('time')[0];
 var valider = document.getElementById("valider");
+var rejouer = document.getElementById("rejouer");
 var reset = document.getElementById('rst');
 var answer = document.getElementById('answer');
 var textToWrite = document.getElementById('textToWrite');
@@ -7,6 +8,8 @@ var sec = 0;
 var min = 0;
 var hrs = 0;
 var t;
+
+rejouer.hidden = true;
 
 let textes = [
     "Un chasseur sachant chasser sans son chien est un bon chasseur.",
@@ -54,6 +57,7 @@ function score(){
         answer.hidden = true;
         reset.hidden = true;
         valider.hidden = true;
+        rejouer.hidden = false;
 
         if (textToWrite.textContent === answer.value){
             textToWrite.style.color = "#34C924";
