@@ -151,7 +151,7 @@ function session($key, $default=NULL) {
 						<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
 							<div class="text w-100">
 								<h2><br><span></span></h2>
-								<p>pas d'inspi pr remplir ce beau carré vert, <br>si vs avez des idées n'hesitez pas</p>
+								<p>PTUT S3-S4</p>
 								<!--<a href="" data-shoppy-product="8oAtmAS" class="btn btn-white btn-outline-white">Buy here !</a>
 							--></div>
 							</div>

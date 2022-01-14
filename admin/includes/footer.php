@@ -4,7 +4,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span class="text-gray-600">Copyright &copy; The Manager 2021</span>
+            <span class="text-gray-600">Copyright &copy; PTUT S3-S4</span>
           </div>
         </div>
       </footer>

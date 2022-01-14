@@ -144,13 +144,13 @@
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
-          <!--<label class="switch">
+          <label class="switch">
                   <i class="fas fa-adjust"></i>
                   <div>
                     <input id="checkBox" type="checkbox" />
                     <span class="slider round"></span>
                   </div>
-         </label>-->
+         </label>
 
 
 

@@ -39,16 +39,16 @@ router.get("/list/count",usersController.getusersCount);
 router.get("/list/:id",usersController.getCustomerById);
 /**
  * @swagger
- * /users/list/{customerId}:
+ * /users/list/{userId}:
  *   get:
  *      description: Used to get a specific customer by his id
  *      tags:
  *          - users
  *      parameters:
  *          - in: path
- *            name: customerId
+ *            name: userId
  *            type: integer
- *            description: Customer id
+ *            description: User id
  *            required: true
  *      responses:
  *          '200':
@@ -197,18 +197,18 @@ router.put("/:id/update",usersController.update);
  *          '400':
  *              description: Bad request
  */
-router.delete("/delete/:customerId",usersController.deleteCustomer);
+router.delete("/delete/:userId",usersController.deleteCustomer);
 /**
  * @swagger
- * /users/delete/{customerId}:
+ * /users/delete/{userId}:
  *   delete:
  *      description: Used to delete Customer
  *      tags:
  *          - users
  *      parameters:
  *          - in: path
- *            name: customerId
- *            description: Customer ID
+ *            name: userId
+ *            description: User id
  *            type: integer
  *            example: 301
  *            schema:
