@@ -18,7 +18,7 @@ include('includes/navbar.php');
 
   <div class="card border-left-primary shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">JEU 1
+      <h6 class="m-0 font-weight-bold text-primary">QUIZ
       </h6>
     </div>
     <div class="card-body">
@@ -48,7 +48,7 @@ include('includes/navbar.php');
 
   <div class="card border-left-primary shadow mb-4">
        <div class="card-header py-3">
-         <h6 class="m-0 font-weight-bold text-primary">JEU 2
+         <h6 class="m-0 font-weight-bold text-primary">DACTYLOGRAPHIE
          </h6>
        </div>
        <div class="card-body">
@@ -72,7 +72,7 @@ include('includes/navbar.php');
 
      <div class="card border-left-primary shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">JEU 3
+              <h6 class="m-0 font-weight-bold text-primary">CODE A TROUS
               </h6>
             </div>
             <div class="card-body">

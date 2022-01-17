@@ -39,7 +39,7 @@ app.use(bodyParser.json());
 const swaggerOption = {
     swaggerDefinition: (swaggerJsdoc.Options = {
         info: {
-            title: "API DE OUF",
+            title: "API PTUT",
             description: "API documentation",
             contact: {
                 name: "ABDELMLEK Sami",
