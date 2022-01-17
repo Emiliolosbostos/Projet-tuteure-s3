@@ -103,11 +103,11 @@ function score(){
                fautes++;
            }
            pourcentReussite = Math.round(100 * (tab2.length - fautes) / tab1.length);
-           form.innerHTML += `<div style="color: #0f6848; font-size: 20px; margin: 2em;" >Sur `+ tab1.length +` caractères à recopier, vous en avez `+ (tab2.length - fautes) +` caractères justes ce qui vous fait un total de <span style="font-size: 30px; color: yellow"> `+ pourcentReussite +`% de réussite!</span></div>`;
+           form.innerHTML += `<div style="color: #0f6848; font-size: 20px; margin: 2em;" >Sur `+ tab1.length +` caractères à recopier, vous en avez `+ (tab2.length - fautes) +` caractères justes ce qui vous fait un total de <span style="font-size: 30px; color: white"> `+ pourcentReussite +`% de réussite!</span></div>`;
        }
        else {
            pourcentReussite = Math.round(100 * (tab1.length - fautes) / tab1.length);
-           form.innerHTML += `<div style="color: #0f6848; font-size: 20px; margin: 2em;">Sur `+ tab1.length +` caractères à recopier, vous en avez `+ (tab1.length - fautes) +` caractères justes ce qui vous fait un total de <span style="font-size: 30px; color: yellow"> `+ pourcentReussite +`% de réussite!</span></div>`;
+           form.innerHTML += `<div style="color: #0f6848; font-size: 20px; margin: 2em;">Sur `+ tab1.length +` caractères à recopier, vous en avez `+ (tab1.length - fautes) +` caractères justes ce qui vous fait un total de <span style="font-size: 30px; color: white"> `+ pourcentReussite +`% de réussite!</span></div>`;
        }
 
        var nbStar = 0;
