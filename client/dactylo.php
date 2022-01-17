@@ -26,10 +26,10 @@
 
             <h2>Veuillez recopier ce qu'il y a écris en arrière plan le plus rapidement possible</h2>
 
-            <form NAME="form" onsubmit="return false">
+            <form id="formulaire" NAME="form" onsubmit="return false">
 
-                <p id="textToWrite" style="font-size: 1.3em; color: #34C924; margin-bottom: 1em ">ceci est un text a recopier</p>
-                <textarea NAME="rep1" id="answer" TYPE=text checked style=" font-size: xx-large; text-align: start; height: 10em; width: 30em;"></textarea>
+                <div id="textToWrite" oncopy="alert('La triche est interdite !'); return false" style="font-size: 1.3em; color: #34C924; margin-bottom: 1em ">ceci est un text a recopier</div>
+                <textarea onkeypress="pressEnter()" onpaste="alert('La triche est interdite !'); return false" NAME="rep1" id="answer" TYPE=text checked style=" font-size: xx-large; text-align: start; height: 10em; width: 30em;"></textarea>
                 <h4><time>00:00:00</time></h4>
                 <button id="rst" style="font-size: large">Réessayer</button>
                 <button id="valider" style="font-size: large">Valider</button>
