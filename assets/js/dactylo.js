@@ -64,76 +64,69 @@ function score(){
         valider.hidden = true;
         rejouer.hidden = false;
 
-        // if (textToWrite.textContent === answer.value){
-        //     textToWrite.style.color = "#34C924";
-        //     textToWrite.textContent = "Bravo à toi tu as vu juste!";
-        // }
-        // else {
-        //     textToWrite.style.color = "#f00020";
-        //     textToWrite.textContent = "Dommage c'est un échec tu fera mieux la prochaine fois!";
-        // }
-
        h1.textContent = "Vous as fini en " + hrs + " heures, " + min+" minutes et " + sec + " secondes !!";
 
-       var tab1 = textToWrite.textContent.split('');
-       var tab2 = answer.value.split('');
-       textToWrite.innerHTML = "";
-       var fautes = 0;
+//       mots par mots
+        var tab1 = textToWrite.textContent.split(' ');
+        var tab2 = answer.value.split(' ');
+        textToWrite.innerHTML = "";
+        var fautes = 0;
 
 
-       for (let i = 0; i<tab1.length ; i++){
-           let colorBG = "";
-           let color = "";
-           if (tab1[i] !== tab2[i]){
-               colorBG = "background-color: #f00020";
-               color = "color: white;"
-               fautes++;
-           }
-           else{
-               color = "color: #34C924;"
-           }
-           textToWrite.innerHTML += `<span style="`+ color + colorBG +`">` + tab1[i] + `</span>`;
-       }
+        for (let i = 0; i<tab1.length ; i++){
+            let colorBG = "";
+            let color = "";
+            if (tab1[i] !== tab2[i]){
+                colorBG = "background-color: #f00020";
+                color = "color: white;"
+                fautes++;
+            }
+            else{
+                color = "color: #34C924;"
+            }
+            textToWrite.innerHTML += `<span style="`+ color + colorBG +`">` + tab1[i] + `</span><span> </span>`;
+        }
 
-       var surplus = tab2.length - tab1.length;
+        var surplus = tab2.length - tab1.length;
 
-       if (surplus >= 0){
-           for (let i = 0; i<surplus ; i++){
-               textToWrite.innerHTML += `<span style="color: #f00020; background-color: #f00020">.</span>`;
-               fautes++;
-           }
-           pourcentReussite = Math.round(100 * (tab2.length - fautes) / tab1.length);
-           form.innerHTML += `<div style="color: #0f6848; font-size: 20px; margin: 2em;" >Sur `+ tab1.length +` caractères à recopier, vous en avez `+ (tab2.length - fautes) +` caractères justes ce qui vous fait un total de <span style="font-size: 30px; color: white"> `+ pourcentReussite +`% de réussite!</span></div>`;
-       }
-       else {
-           pourcentReussite = Math.round(100 * (tab1.length - fautes) / tab1.length);
-           form.innerHTML += `<div style="color: #0f6848; font-size: 20px; margin: 2em;">Sur `+ tab1.length +` caractères à recopier, vous en avez `+ (tab1.length - fautes) +` caractères justes ce qui vous fait un total de <span style="font-size: 30px; color: white"> `+ pourcentReussite +`% de réussite!</span></div>`;
-       }
+        if (surplus >= 0){
+            for (let i = 0; i<surplus ; i++){
+                textToWrite.innerHTML += `<span style="color: #f00020; background-color: #f00020">.</span>`;
+                fautes++;
+            }
+            pourcentReussite = Math.round(100 * (tab2.length - fautes) / tab1.length);
+            form.innerHTML += `<div style="color: #0f6848; font-size: 20px; margin: 2em;" >Sur `+ tab1.length +` mots à recopier, vous en avez `+ (tab2.length - fautes) +` justes ce qui vous fait un total de <span style="font-size: 30px; color: white"> `+ pourcentReussite +`% de réussite!</span></div>`;
+        }
+        else {
+            pourcentReussite = Math.round(100 * (tab1.length - fautes) / tab1.length);
+            form.innerHTML += `<div style="color: #0f6848; font-size: 20px; margin: 2em;">Sur `+ tab1.length +` mots à recopier, vous en avez `+ (tab1.length - fautes) +` justes ce qui vous fait un total de <span style="font-size: 30px; color: white"> `+ pourcentReussite +`% de réussite!</span></div>`;
+        }
 
-       var nbStar = 0;
+        var nbStar = 0;
 
-       if (pourcentReussite >= 95){
-           nbStar = 5;
-       }
-       else if(pourcentReussite >= 80){
-           nbStar = 4;
-       }
-       else if(pourcentReussite >= 50){
-           nbStar = 3;
-       }
-       else if(pourcentReussite >= 25){
-           nbStar = 2;
-       }
-       else{
-           nbStar = 1;
-       }
+        if (pourcentReussite >= 95){
+            nbStar = 5;
+        }
+        else if(pourcentReussite >= 80){
+            nbStar = 4;
+        }
+        else if(pourcentReussite >= 50){
+            nbStar = 3;
+        }
+        else if(pourcentReussite >= 25){
+            nbStar = 2;
+        }
+        else{
+            nbStar = 1;
+        }
 
-       form.innerHTML += `<div id="stars"></div>`;
-       var putStars = document.getElementById("stars");
+        form.innerHTML += `<div id="stars"></div>`;
+        var putStars = document.getElementById("stars");
 
-       for(let i = 0; i<nbStar; i++){
-           putStars.innerHTML += '<span>'+ star +'</span>';
-       }
+        for(let i = 0; i<nbStar; i++){
+            putStars.innerHTML += '<span>'+ star +'</span>';
+        }
+
 }
 
 valider.onclick = function () {
