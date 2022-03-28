@@ -5,7 +5,11 @@ class Question {
       this.answer = answer;
     }
     isCorrectAnswer(choice) {
-      return this.answer === choice;
+      if (this.answer === choice){
+        return this.answer === choice;
+      } else {
+        this.falseResponse = choice;
+      }
     }
   }
   let questions = [
@@ -89,6 +93,12 @@ class Question {
           <p>${quiz.questions[quiz.indexAnswer].choices[0]}</p>
         </button>
         `;
+      } else if (quiz.questions[quiz.indexAnswer].choices[0] === quiz.questions[quiz.indexAnswer].falseResponse) {
+        answerHTML+=`
+        <button class="btn" id="falseAnswer">    
+          <p>${quiz.questions[quiz.indexAnswer].choices[0]}</p>
+        </button>
+        `;
       } else {
         answerHTML+=`
         <button class="btn">    
@@ -100,6 +110,12 @@ class Question {
       if (quiz.questions[quiz.indexAnswer].choices[1] === quiz.questions[quiz.indexAnswer].answer) {
         answerHTML+=`
         <button class="btn" id="realAnswer">    
+          <p>${quiz.questions[quiz.indexAnswer].choices[1]}</p>
+        </button>
+        `;
+      } else if (quiz.questions[quiz.indexAnswer].choices[1] === quiz.questions[quiz.indexAnswer].falseResponse) {
+        answerHTML+=`
+        <button class="btn" id="falseAnswer">    
           <p>${quiz.questions[quiz.indexAnswer].choices[1]}</p>
         </button>
         `;
@@ -117,6 +133,12 @@ class Question {
           <p>${quiz.questions[quiz.indexAnswer].choices[2]}</p>
         </button>
         `;
+      } else if (quiz.questions[quiz.indexAnswer].choices[2] === quiz.questions[quiz.indexAnswer].falseResponse) {
+        answerHTML+=`
+        <button class="btn" id="falseAnswer">    
+          <p>${quiz.questions[quiz.indexAnswer].choices[2]}</p>
+        </button>
+        `;
       } else {
         answerHTML+=`
         <button class="btn">    
@@ -131,6 +153,12 @@ class Question {
           <p>${quiz.questions[quiz.indexAnswer].choices[3]}</p>
         </button>
         </div>
+        `;
+      } else if (quiz.questions[quiz.indexAnswer].choices[3] === quiz.questions[quiz.indexAnswer].falseResponse) {
+        answerHTML+=`
+        <button class="btn" id="falseAnswer">    
+          <p>${quiz.questions[quiz.indexAnswer].choices[3]}</p>
+        </button>
         `;
       } else {
         answerHTML+=`

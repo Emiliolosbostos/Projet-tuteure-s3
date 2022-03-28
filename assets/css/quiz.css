@@ -76,6 +76,10 @@ body .container .answers {
 #realAnswer {
   background: #17ff02;
 }
+
+#falseAnswer {
+  background: #bd4147;
+}
 /*Les boutons pour indexer*/
 
 .increment {
