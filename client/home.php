@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['valid'])){
-  echo 'Bienvenue mon reuf';
+  echo '';
 }else{
   session_destroy();
   header('Location: ../');

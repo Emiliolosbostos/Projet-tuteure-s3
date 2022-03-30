@@ -5,6 +5,16 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
+
+body {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-height: 100vh;
+  background: #202020;
+  color: #dfe4ea;
+}
+
 .content{
   position: absolute;
   top: 50%;
@@ -27,35 +37,40 @@
   color: #202020;
 }
 .content button {
-  color: #f2f2f2;
+  color: #202020;
   flex: 1 0 45%;
   width: 15%;
   height: 25%;
   cursor: pointer;
   border: none;
-  background: #202020;
+  background: #f2f2f2;
   border-radius: 5px;
   margin: 2%;
   font-weight: bolder;
 }
+
 table{
   border-collapse: collapse;
   width: 100%;
   margin-top: 20px;
-  color : black;
+  color : #f2f2f2;
   ;
 }
+
 td, th{
   border: 1px solid #cccccc;
   padding: 8px;
 }
 th{
+  background-color : black;
   font-weight: bold;
   text-transform: uppercase;
 }
-th:nth-child(even){
-  background-color : black;
+
+tr {
+  background-color: dimgray;
 }
+
 tr:hover{
   background-color: #17ff02;
   color: white;
