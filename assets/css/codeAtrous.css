@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
 * {
+    font-family: "Josefin Sans", sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: "Josefin Sans", sans-serif;
     background: #202020;
     color: #dfe4ea;
 }
@@ -25,7 +25,7 @@ body h1 span {
     color: #17ff02;
 }
 
-h1, h2, #code {
+h1, h2, #code, {
     margin-top: 30px;
     display: grid;
     align-items: center;
@@ -47,9 +47,7 @@ h1, h2, #code {
 h1 {
     padding-top: 90px;
     margin-top: 90px;
-
 }
-
 
 hr {
     height: 1px;
