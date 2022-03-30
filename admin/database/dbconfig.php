@@ -27,4 +27,15 @@ if(!$connection)
         </div>
     ';
 }
+
+try {
+    //$pdo = new PDO('mysql:host=localhost;dbname=;', 'root', '');
+    $pdo = new PDO('mysql:host=localhost;dbname=ptuts3;', 'root', '');
+    $return['sucess'] = true;
+    $return['msg'] = "carré";
+} catch(Exception $e){
+    $return['sucess'] = false;
+    $return['msg'] = "pas carré";
+}
+
 ?>

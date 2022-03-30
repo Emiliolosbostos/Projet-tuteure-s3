@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE HTML>
 <html lang="fr">
 <head>
@@ -27,7 +28,9 @@
 <!--        <input type="image" src="../assets/res/icons/icons8-finn-64.png" id="icone" onclick="changeIcon()">-->
     </div>
   <div class="infoPerso">
-      Name: Emile
+      Name: <?php echo ($_SESSION['username']); ?>
+      <br>
+      Usertype : <?php echo ($_SESSION['usertype']); ?>
   </div>
     <div class="stats">
         <div id="stat">
