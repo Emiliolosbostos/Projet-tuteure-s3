@@ -18,7 +18,7 @@
     <h2>
     <form method="post" action="codeAtrous.php">
         <label for="language">Langage:</label>
-        <select class="language" name="language" id="language">
+        <select id="language">
             <option value="Java" <?php if(isset($_POST["language"]) && $_POST["language"]=="Java") echo("selected"); ?> >
                 Java
             </option>
@@ -27,12 +27,6 @@
             </option>
             <option value="HTML" <?php if(isset($_POST["language"]) && $_POST["language"]=="HTML") echo("selected"); ?> >
                 HTML
-            </option>
-            <option value="Javascript" <?php if(isset($_POST["language"]) && $_POST["language"]=="Javascript") echo("selected"); ?> >
-                Javascript
-            </option>
-            <option value="C" <?php if(isset($_POST["language"]) && $_POST["language"]=="C") echo("selected"); ?> >
-                C
             </option>
         </select>
         <br><br>
