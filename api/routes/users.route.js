@@ -36,12 +36,12 @@ router.get("/list/count",usersController.getusersCount);
  *          '400':
  *              description: Bad request
  */
-router.get("/list/:id",usersController.getCustomerById);
+router.get("/list/:id",usersController.getUserById);
 /**
  * @swagger
  * /users/list/{userId}:
  *   get:
- *      description: Used to get a specific customer by his id
+ *      description: Used to get a specific user by his id
  *      tags:
  *          - users
  *      parameters:
@@ -121,74 +121,26 @@ router.put("/:id/update",usersController.update);
  *            schema:
  *              type: object
  *              required:
- *                 - customerName
- *                 - contactLastName
- *                 - contactFirstName
- *                 - phone
- *                 - addressLine1
- *                 - addressLine2
- *                 - city
- *                 - state
- *                 - postalCode
- *                 - country
- *                 - salesRepEmployeeNumber
- *                 - creditLimit
+ *                 - username
+ *                 - email
+ *                 - usertype
  *              properties:
- *                  customerName:
+ *                  username:
  *                      type: string
  *                      minLength: 1
  *                      maxLength: 45
- *                      example: Sami
- *                  contactLastName:
+ *                      example: sami123
+ *                  email:
  *                      type: string
  *                      minLength: 1
  *                      maxLength: 45
- *                      example: Grosse
- *                  contactFirstName:
+ *                      example: sami@gmail.fr
+ *                  usertype:
  *                      type: string
  *                      minLength: 1
- *                      maxLength: 45
- *                      example: Moula
- *                  phone:
- *                      type: string
- *                      minLength: 1
- *                      maxLength: 45
- *                      example: 06123456789
- *                  addressLine1:
- *                      type: string
- *                      minLength: 1
- *                      maxLength: 45
- *                      example: 1 rue de Paris
- *                  addressLine2:
- *                      type: string
- *                      minLength: 1
- *                      maxLength: 45
- *                  city:
- *                      type: string
- *                      minLength: 1
- *                      maxLength: 45
- *                      example: Paris 18ème
- *                  state:
- *                      type: string
- *                      minLength: 1
- *                      maxLength: 45
- *                      example: Ile de France
- *                  postalCode:
- *                      type: string
- *                      minLength: 1
- *                      maxLength: 45
- *                      example: 75018
- *                  country:
- *                      type: string
- *                      minLength: 1
- *                      maxLength: 45
- *                      example: France
- *                  salesRepEmployeeNumber:
- *                      type: integer
- *                      example: 1702
- *                  creditLimit:
- *                      type: decimal(10,2)
- *                      example: 54000.00
+ *                      maxLength: 5
+ *                      example: admin
+ *
  *      responses:
  *          '200':
  *              description: Resource updated successfully
@@ -197,7 +149,7 @@ router.put("/:id/update",usersController.update);
  *          '400':
  *              description: Bad request
  */
-router.delete("/delete/:userId",usersController.deleteCustomer);
+router.delete("/delete/:userId",usersController.deleteUser);
 /**
  * @swagger
  * /users/delete/{userId}:
@@ -214,7 +166,7 @@ router.delete("/delete/:userId",usersController.deleteCustomer);
  *            schema:
  *              type: object
  *              required:
- *                 - customerNumber
+ *                 - userId
  *      responses:
  *          '200':
  *              description: Resource updated successfully

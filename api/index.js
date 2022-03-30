@@ -4,6 +4,7 @@ const app = express();
 const bodyParser = require("body-parser");
 //ADD Routers
 const usersRoutes = require("./routes/users.route");
+const questionsRoutes = require("./routes/questions.route");
 //ADD SWAGGER MODULES
 const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
@@ -106,6 +107,7 @@ const swaggerDocs = swaggerJsdoc(swaggerOption);
 app.use("/api-docs" ,swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 /** Swagger Initialization - END */
 app.use("/users",usersRoutes);
+app.use("/questions",questionsRoutes);
 
 
 require('./config/passport/passport.js')(passport,models.user);

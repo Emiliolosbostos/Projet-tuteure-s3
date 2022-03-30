@@ -44,7 +44,7 @@ exports.getusersCount = (req,res,next)=>{
 
 
 exports.edit = (req,res,next)=>{
-    usersService.getCustomerById(req.params.id,(error,results)=>{
+    usersService.getUserById(req.params.id,(error, results)=>{
         if (error){
             console.log(error);
             res.redirect("/users");
@@ -54,8 +54,8 @@ exports.edit = (req,res,next)=>{
     });
 };
 
-exports.getCustomerById = (req,res,next)=>{
-    usersService.getCustomerById(req.params.id,(error,results)=>{
+exports.getUserById = (req, res, next)=>{
+    usersService.getUserById(req.params.id,(error, results)=>{
         if (error){
             console.log(error);
             return res.status(400).send({success:0,data:"Bad request"});
@@ -93,11 +93,11 @@ exports.update = (req,res)=>{
         id:req.body.id,
         username:req.body.username,
         email:req.body.email,
-        password:req.body.password
+        usertype:req.body.usertype
     };
     console.log(data);
     console.log(req.params.id);
-    usersService.updateCustomer(req.params.id,data,(error,results)=>{
+    usersService.updateUser(req.params.id,data,(error, results)=>{
         if (error){
             console.log(error);
             return res.status(400).send({success:0,data:"Bad request"});
@@ -109,8 +109,8 @@ exports.update = (req,res)=>{
     });
 };
 
-exports.deleteCustomer = (req,res,next)=>{
-    usersService.deleteCustomer(req.params.id,(error,results)=>{
+exports.deleteUser = (req, res, next)=>{
+    usersService.deleteUser(req.params.id,(error, results)=>{
         if (error){
             console.log(error);
             return res.status(400).send({success:0,data:"Bad request"});

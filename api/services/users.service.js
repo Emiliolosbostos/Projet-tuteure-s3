@@ -11,7 +11,7 @@ exports.getAllusers = (callback) => {
 };
 
 exports.usersCount = (callback) => {
-    db.query("SELECT count('customerNumber') FROM `users`",function(error, results, fields){
+    db.query("SELECT count('usersNumber') FROM `users`",function(error, results, fields){
         if(error){
             return callback(error);
         }else{
@@ -20,7 +20,7 @@ exports.usersCount = (callback) => {
     });
 };
 
-exports.getCustomerById = (id,callback) => {
+exports.getUserById = (id, callback) => {
     db.query("SELECT * FROM `users` WHERE `id` = ?",
         [id],
         function(error, results){
@@ -32,10 +32,9 @@ exports.getCustomerById = (id,callback) => {
     });
 };
 
-
 exports.register = (data, callback) => {
     db.query(
-        "INSERT INTO `users`(`username`,`email`,`password`,`ip`) VALUES (?,?,?,1)",
+        "INSERT INTO `users`(`username`,`email`,`password`) VALUES (?,?,?)",
         [data.username,data.email,data.password],
         (error, results, fields) => {
             if (error) {
@@ -46,9 +45,9 @@ exports.register = (data, callback) => {
     );
 };
 
-exports.updateCustomer = (id,data,callback) => {
-    db.query("UPDATE `users` SET `customerName`=?,`contactLastName`=?,`contactFirstName`=?,`phone`=?,`addressLine1`=?,`addressLine2`=?,`city`=?,`state`=?,`postalCode`=?,`country`=?,`salesRepEmployeeNumber`=?,`creditLimit`=? WHERE `customerNumber` = ?",
-        [data.customerName, data.contactLastName, data.contactFirstName, data.phone, data.addressLine1, data.addressLine2, data.city, data.state, data.postalCode, data.country, data.salesRepEmployeeNumber, data.creditLimit, id],
+exports.updateUser = (id, data, callback) => {
+    db.query("UPDATE `users` SET `username`=?,`email`=?,`usertype`=? WHERE `id` = ?",
+        [data.username, data.email, data.usertype, id],
         function(error, results){
             if(error){
                 return callback(error);
@@ -58,7 +57,7 @@ exports.updateCustomer = (id,data,callback) => {
         });
 };
 
-exports.deleteCustomer = (id,callback) => {
+exports.deleteUser = (id, callback) => {
     db.query("DELETE FROM `users` WHERE `id` = ?",
         [id],
         function(error, results){
