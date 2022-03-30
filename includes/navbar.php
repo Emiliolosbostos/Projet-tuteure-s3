@@ -41,7 +41,7 @@
         <button id="accueil" class="btn" onclick="window.location.href='home.php';">
           <strong>Accueil</strong>
         </button>
-        <button id="profil" class="btn">
+        <button id="profil" class="btn" onclick="window.location.href='profil.php';">
           <strong>Profil</strong>
         </button>
     </div>

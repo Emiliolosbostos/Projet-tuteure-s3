@@ -9,9 +9,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-        body{
-            background: #fcfcfc;
-        }
         footer{
             position: absolute;
             bottom: 0;
