@@ -15,34 +15,52 @@
     </h1>
     <p><hr></p>
 
-    <h2>Langage: Java</h2>
-    <form NAME="form2">
+    <h2>
+    <form method="post" action="codeAtrous.php">
+        <label for="language">Langage:</label>
+        <select class="language" name="language" id="language">
+            <option value="Java" <?php if(isset($_POST["language"]) && $_POST["language"]=="Java") echo("selected"); ?> >
+                Java
+            </option>
+            <option value="Python" <?php if(isset($_POST["language"]) && $_POST["language"]=="Python") echo("selected"); ?> >
+                Python
+            </option>
+            <option value="HTML" <?php if(isset($_POST["language"]) && $_POST["language"]=="HTML") echo("selected"); ?> >
+                HTML
+            </option>
+            <option value="Javascript" <?php if(isset($_POST["language"]) && $_POST["language"]=="Javascript") echo("selected"); ?> >
+                Javascript
+            </option>
+            <option value="C" <?php if(isset($_POST["language"]) && $_POST["language"]=="C") echo("selected"); ?> >
+                C
+            </option>
+        </select>
+        <br><br>
+    </h2>
+
+
+    <h3 align="center" id="question">
+    </h3>
+
+
+    <form method="post" action="codeAtrous.php" name="form2">
         <div id="code">
-            <blockquote>
-                public class IntArrayExemple { <br>
-                &emsp;public int[] cells;<br>
-                <br>
-                &emsp;public IntArrayExemple(int size) { <br>
-                &emsp;&emsp;  // création du tableau <br>
-                &emsp;&emsp;// initialisation des int à 0 <br>
-                &emsp;&emsp;cells = new int[size]; <br>
-                &emsp;&emsp;for (<input NAME="rep1" id="answer" TYPE=text SIZE=20 MAXLENGTH=20 checked></input>) cells[i] = 0; <br>
-                &emsp;} <br>
-                <br>
-                } <br>
-                <br>
-                <!--            <LI>-->
-                <!--                La somme des 3 angles d'un triangle est égale à-->
-                <!--                <INPUT NAME="rep2" TYPE=text SIZE=5 MAXLENGTH=5></INPUT>-->
-                <!--                degrés.-->
-                <!--            </LI>-->
-            </blockquote>
         </div>
         <br>
-        <div ALIGN=center>
-            <input TYPE=submit VALUE="Vérifier" ONCLICK="verif1()" ></input>
+        <div align="center" id="response">
+
+        <div>
+
+        <div align=center id="check">
+            <input type=button value="Vérifier" onclick="check()" ></input>
         </div>
     </form>
+
+    <br>
+
+    <div id="score">
+        Score: <span id="scoreNow"></span> / <span id="scoreTotal"></span>
+    </div>
 <script src="../assets/js/codeAtrous.js" type="text/javascript" ></script>
 </body>
 </html>
