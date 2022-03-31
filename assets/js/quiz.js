@@ -12,7 +12,8 @@ class Question {
     }
   }
 }
-let questions = [
+let totalQuestions = [
+  //JavaScript
   new Question("Quelle méthode Javascript permet de filtrer les éléments d'un tableau",
   ["indexOf()", "map()", "filter()", "reduce()"], "filter()"),
   new Question("Quelle méthode Javascript permet de vérifier si un élément figure dans un tableau",
@@ -20,9 +21,42 @@ let questions = [
   new Question("Quelle méthode transforme du JSON en un objet Javascript ?",
   ["JSON.parse()","JSON.stringify()", "JSON.object()", "JSON.toJS"], "JSON.parse()"),
   new Question("Quel objet Javascript permet d'arrondir à l'entier le plus proche",
-  ["Math.ceil()","Math.floor()", "Math.round()", "Math.random()"], "Math.round()")
+  ["Math.ceil()","Math.floor()", "Math.round()", "Math.random()"], "Math.round()"),
+  new Question("Dans quelle balise HTML placer du code JavaScript ?",
+    ["js","javascript","script","rel"], "script"),
+  new Question("Comment écrivez-vous « Hello World » dans une boîte d’alerte en javaScript ?",
+    ['msg("Hello World")', 'alert("Hello World")', 'msgBox("Hello World")', 'alertBox("Hello World")',], 'alert("Hello World")',),
+  new Question("Comment créer une fonction JavaScript",
+    ["function = f()","function:f()","f()", "function f()"], "function f()"),
+  //Java
+  new Question("Quelle est la version actuelle de Java SE sortie en mars 2022 ?",
+    ["9", "14", "18", "22"], "18"),
+  //Shell
+  new Question("Dans le terminal quelle commande permet de crée un dossier",
+    ["mkdir", "cat", "touch", "create"], "mkdir"),
+  //Python
+  new Question("Python est un langage ...",
+    ["interprété", "machine", "compilé", "binaire"], "interprété"),
+
 ];
 
+let questions = []
+function chooseQuestions() {
+  let count = 0
+  let isTrue = true
+  while (count < 10) {
+    let index = Math.floor(Math.random() * totalQuestions.length)
+    for (let i = 0; i < questions.length; i++) {
+      if (totalQuestions[index] === questions[i]) {
+        isTrue = false
+      }
+    }
+    if (isTrue) {
+      questions[count] = totalQuestions[index]
+      count += 1
+    }
+  }
+}
 class Quiz {
   constructor(questions) {
     this.score = 0;
@@ -30,6 +64,7 @@ class Quiz {
     this.currentQuestionIndex = 0;
     this.indexAnswer = 0;
   }
+
   getCurrentQuestion() {
     return this.questions[this.currentQuestionIndex];
   }
@@ -209,6 +244,7 @@ quizApp = () => {
   }
 }
 // Create Quiz
+chooseQuestions()
 let quiz = new Quiz(questions);
 quizApp();
 //console.log(quiz);
